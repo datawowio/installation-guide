@@ -1,4 +1,4 @@
-### INSTALLING ENVIRONMENT GUIDE (MACBOOK)
+## **Installation guide**
 
 **XCode Command Line Developer Tools**
 ```
@@ -34,17 +34,29 @@ brew install python3
 ```
 brew install awsebcli
 ```
+**Yarn**
+```
+brew install yarn
+```
+**Node**
+```
+brew install node
+```
+**Node version manager**
+```
+brew install nvm
+```
 
 **VScode** ([**Editor**](https://code.visualstudio.com/)) 
 ```
 brew cask install visual-studio-code
 ```
-> **Tip:** another editor such as [**_atom_**]([https://atom.io/](https://atom.io/)), [**_sublime_**](https://www.sublimetext.com/),  vim, neovim, etc.
+> **Tip:** another editor such as [**_atom_**]((https://atom.io/)), [**_sublime_**](https://www.sublimetext.com/),  vim, neovim, etc.
 >
 > IDE: [**_rubymine_**](https://www.jetbrains.com/ruby/), [**_intellij_**](https://www.jetbrains.com/idea/)
 
+## **Installation ruby on rails guide**
 
-### INSTALLING RUBY ON RAILS GUIDE
 **RBENV - ruby manager control version**
 ```
 brew update brew install rbenv ruby-build rbenv-gem-rehash
@@ -53,7 +65,7 @@ on ~/.bashrc or ~/.zshrc
 ```
 eval  "$(rbenv init -)"
 ```
-> **Tip:**  after that ``` souce ~/.bashrc or ~/.zshrc ```
+> **Tip:**  after it finished ``` source ~/.bashrc or ~/.zshrc ```
 
 **ruby install by version**
 ```
@@ -71,3 +83,6 @@ gem install bundler2.0.1
 ```
 gem install rails
 ```
+> **Tip:** after it finished ``` rails -v ```
+>
+> all command ```rails new -h```
