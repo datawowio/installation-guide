@@ -84,6 +84,9 @@ Example gem file
   prawn-table
   roo
 
+# Breadcrumbs navigation
+  breadcrumbs_on_rails
+
 # service
   grape
 
@@ -92,12 +95,24 @@ Example gem file
 ```
 Development, Test
 
-awesome_print
-better_errors
-dotenv-rails
-pry-byebug
-rspec
-rubocop
-simplecov
-vcr
+# arrange display code
+  awesome_print
+  better_errors
+
+# Loading .env
+  dotenv-rails
+
+# Debugger
+  pry-byebug
+
+# BDD
+  rspec
+# Best practice rules
+  rubocop
+
+# monitor test coverage
+  simplecov
+
+# mock request
+  vcr
 ```
