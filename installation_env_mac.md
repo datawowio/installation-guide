@@ -51,7 +51,7 @@ brew install nvm
 ```
 brew cask install visual-studio-code
 ```
-> **Tip:** another editor such as [**_atom_**]((https://atom.io/)), [**_sublime_**](https://www.sublimetext.com/),  vim, neovim, etc.
+> **Tip:** another editor such as [**_atom_**](https://atom.io/), [**_sublime_**](https://www.sublimetext.com/),  vim, neovim, etc.
 >
 > IDE: [**_rubymine_**](https://www.jetbrains.com/ruby/), [**_intellij_**](https://www.jetbrains.com/idea/)
 
