@@ -86,3 +86,13 @@ gem install rails
 > **Tip:** after it finished ``` rails -v ```
 >
 > all command ```rails new -h```
+
+**Basic create rails project**
+
+```
+rails new blog -d=postgresql && cd blog
+rails db:create
+rails s
+
+-- welcome to rails --
+```
