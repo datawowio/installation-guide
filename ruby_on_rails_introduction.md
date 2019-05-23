@@ -3,6 +3,28 @@ Rails is a web application development framework written in the Ruby programming
 - Don't Repeat yourself(DRY)
 - Convention Over Configuration
 
+## Top command in ruby on rails
+~~~~ruby
+ rails new `- your name -` #rails new blog -d=postgresql
+ rails generate controller `-your name-` #rails -g controller blogs
+ rails generate model `-your name`- #rails -g model blog
+ rails generate migration `-your name-` #rails -g createPostModel
+ rails generate scaffold `-your name-`#rails -g scaffold blogs
+
+ rails server
+ rails route
+ rails console
+
+ rails db:create
+ rails db:migrate
+ rails db:drop
+ rails db:rollback 
+ rails db:schema:load
+
+ rspec # BDD test development
+ binding.pry # debugger
+
+~~~~
 ## Restful route
 
 ```
@@ -42,77 +64,73 @@ Example gem file
     gem 'rspec', '~> major,minor,patch'
     gem 'rspec', '~> 3.8.0'
 
-```
-# Tracking error
-  airbrake
 
-# Manage environment
-  config
+### \# Tracking error
+  - [airbrake](https://github.com/airbrake/airbrake/)
 
-# Paginate
-  bootstrap-kaminari-views
-  kaminari
-  kaminari-grape
+### \# Manage environment
+  - [config](https://github.com/railsconfig/config/)
 
-# Form
-  simple_form
+### \# Paginate
+  - [bootstrap-kaminari-views](https://github.com/matenia/bootstrap-kaminari-views/)
+  - [kaminari](https://github.com/kaminari/kaminari/)
+  - [kaminari-grape](https://github.com/kaminari/kaminari-grape/)
 
-# User Authorization
-  devise
-  cancancan
-  has_secure_token
+### \# Form
+  - [simple_form](https://rubygems.org/gems/simple_form)
 
-# Social Authorization 
-  omiauth
+### \# User Authorization
+  - [devise](https://github.com/plataformatec/devise/)
+  - [cancancan](https://rubygems.org/gems/cancancan)
+  - [has_secure_token](https://github.com/robertomiranda/has_secure_token/)
 
-# Cache
-  redis
+### \# Social Authorization 
+  - [omniauth](https://github.com/omniauth/omniauth/)
 
-# Cron-job
-  sidekiq
+### \# Cache
+  - [redis](https://github.com/redis/redis-rb/)
 
-# Tracking error
-  airbrake
+### \# Cron-job
+  - [sidekiq](https://github.com/mperham/sidekiq/)
 
-# React with rails
-  react-rails
+### \# React with rails
+  - [react-rails](https://github.com/reactjs/react-rails/)
 
-# Document
-  axlsx
-  axlsx_rails
-  prawn
-  prawn-table
-  roo
+### \# Document
+  - [axlsx](https://github.com/randym/axlsx/)
+  - [axlsx_rails](https://github.com/straydogstudio/axlsx_rails/)
+  - [prawn](https://github.com/prawnpdf/prawn/)
+  - [prawn-table](https://github.com/prawnpdf/prawn-table/)
+  - [roo](https://github.com/roo-rb/roo/)
 
-# Breadcrumbs navigation
-  breadcrumbs_on_rails
+### \# Breadcrumbs navigation
+  - [breadcrumbs_on_rails](https://rubygems.org/gems/breadcrumbs_on_rails)
 
-# service
-  grape
+### \# service
+  - [grape](https://github.com/ruby-grape/grape/)
 
-```
 
-```
-Development, Test
+# Development, Test
 
-# arrange display code
-  awesome_print
-  better_errors
+### \# Pretty print your Ruby objects with style
+  - [awesome_print](https://github.com/awesome-print/awesome_print/)
+  - [better_errors](https://github.com/BetterErrors/better_errors/)
 
-# Loading .env
-  dotenv-rails
+### \# Loading .env
+  - [dotenv-rails](https://github.com/bkeepers/dotenv/)
 
-# Debugger
-  pry-byebug
+### \# Debugger
+  - [pry-byebug](https://rubygems.org/gems/pry-byebug)
 
-# BDD
-  rspec
-# Best practice rules
-  rubocop
+### \# BDD
+  - [rspec](https://github.com/rspec/rspec/)
 
-# monitor test coverage
-  simplecov
+### \# Best practice rules
+  - [rubocop](https://github.com/rubocop-hq/rubocop/)
 
-# mock request
-  vcr
-```
+### \# monitor test coverage
+  - [simplecov](https://rubygems.org/gems/simplecov)
+
+### \# mock request
+  - [vcr](https://github.com/vcr/vcr/)
+
