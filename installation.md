@@ -77,7 +77,7 @@ rbenv install 2.6.1
 
 **Bundler**
 ```
-gem install bundler2.0.1
+gem install bundler 2.0.1
 ```
 **Ruby on Rails**
 ```
