@@ -12,12 +12,13 @@ rails new blog -d=postgresql && cd blog
 จะเห็นว่า ruby on rails สร้างเครื่องมือมาให้เราค่อนข้างพร้อมใช้งานในระดับหนึ่งแล้ว
 เราลองมาทดสอบกันดูว่า ระบบยังทำงานได้ถูกต้องรึเปล่า
 ~~~~ruby 
-rails create # create database
+rails db:create # create database
 rails server # run server
 ~~~~
 โอเคครับ ระบบยังทำงานได้ 
 ต่อไปเรามาเตรียมเครื่องมือให้เราใช้งานได้สะดวกขึ้นอีกนะครับ
 
+Gemfile
 ~~~~ruby
 gem 'bulma-rails', '~> 0.7.4' # css framework
 gem 'simple_form', '~> 4.1.0' # alternative html form develop for rails
@@ -50,17 +51,26 @@ root 'posts#index'
 rails routes
 ~~~~
 create views/posts/index.html.erb
+~~~~ruby
+<h1>Hello Ruby on rails</h1>
+~~~~
 change application.css -> application.scss
 ~~~~ruby
 @import 'bulma'
 ~~~~
+ทดสอบการทำงาน http://localhost:3000/posts
+
 เมื่อเรามี controller ไว้ติดต่อหน้าบ้านแล้ว เราก็ต้องมี model ไว้ติดต่อ database
 ~~~~ruby
 rails g model post title:string content:string
 rails db:migrate
 ~~~~
-ต่อไป เพิ่มโค้ด ไว้สำหรับ สร้าง posts
+ต่อไป สร้าง create method controllers/post_controller.rb
 ~~~~ruby
+def new
+  @post = Post.new
+end
+
 def create
   @post = Post.new(post_params)
   if @post.save
@@ -76,6 +86,29 @@ def post_param
   params.require(:post).permit(:title, :content)
 end
 ~~~~
+
+views/new.html.erb
+~~~~ruby
+<div class="section">
+  <%= simple_form_for @post do |f| %>
+    <div class="field">
+      <div class="control">
+        <%= f.input :title, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= f.input :content, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
+      </div>
+    </div>
+    <%= f.button :submit, 'Create new post', class: "button is-primary" %>
+  <% end %>
+</div>
+~~~~
+ทดสอบ http://localhost:3000/posts/new
+
+
 เมื่อเรากดสร้าง post จะเห็นได้ว่า โค้ด error
 เอ... เป็นเพราะว่า post_path มันจะวิ่งไปที่ show และ เรายังไม่ได้ สร้างหน้า show.html.erb นั้นเอง
 
