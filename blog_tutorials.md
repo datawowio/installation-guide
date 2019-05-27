@@ -198,6 +198,10 @@ posts/index.html.erb
   </div>
 </section>
 ~~~~
+ทดสอบ http://localhost:3000/
+
+<img width="1112" alt="Screen Shot 2562-05-27 at 09 10 58" src="https://user-images.githubusercontent.com/40669001/58391281-5c484780-805f-11e9-8268-7c3fca3f980f.png">
+
 
 ตกแต่งเพิ่มเติม
 
@@ -313,5 +317,9 @@ posts/edit.html.erb
 <%= render 'form' %>
 ~~~~
 กด refresh ทดสอบการทำงาน 
+
+<img width="1434" alt="Screen Shot 2562-05-24 at 00 09 04" src="https://user-images.githubusercontent.com/40669001/58391349-bd701b00-805f-11e9-9dc8-b6901842ff5e.png">
+
+<img width="1438" alt="Screen Shot 2562-05-24 at 00 09 18" src="https://user-images.githubusercontent.com/40669001/58391352-be08b180-805f-11e9-8190-13719ef060bc.png">
 
 จบไปแล้วสำหรับ session เล็ก ๆ น้อย ๆ ครับ 
