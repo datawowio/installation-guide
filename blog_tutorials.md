@@ -301,7 +301,4 @@ posts/edit.html.erb
 ~~~~
 กด refresh ทดสอบการทำงาน 
 
-
-
-### Plan
- -> _add comments and alert message( coming soon )_
+จบไปแล้วสำหรับ session เล็ก ๆ น้อย ๆ ครับ 
