@@ -82,7 +82,7 @@ end
 
 private
 
-def post_param
+def post_params
   params.require(:post).permit(:title, :content)
 end
 ~~~~
@@ -162,6 +162,7 @@ def index
   @posts = Post.all.order('created_at DESC')
 end
 ~~~~
+posts/index.html.erb
 ~~~~ruby
 <% content_for :page_title, 'Post list'%>
 
@@ -185,8 +186,9 @@ end
 </section>
 ~~~~
 
-เพิ่ม ความสวยงานกันนิดหน่อยนะครับ
-_header.html.erb
+ตกแต่งเพิ่มเติม
+
+layouts/_header.html.erb
 ~~~~erb
 <section class='hero is-primary is-medium'>
   <div class='hero-head'>
@@ -220,7 +222,7 @@ _header.html.erb
 ~~~~
 layouts/application.html.erb
 ~~~~erb
-<%= render 'layouts/post' %>
+<%= render 'layouts/header' %>
 <%= yield %>
 ~~~~
 js/application.js
@@ -242,6 +244,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 ~~~~
+ต่อไป ลองมาเพิ่มหน้า edit และ delete 
+
+อย่างที่บอกไปก่อนหน้านี้นะครับ เราต้องมี edit และ destroy method กันก่อน
+~~~~ruby
+def edit
+  @post = Post.find(params[:id])
+end
+
+def update
+  @post = Post.find(params[:id])
+
+  if @post.update(post_params)
+    redirect_to @post
+  else
+    render 'edit'
+  end
+end
+
+def destroy
+  @post = Post.find(params[:id])
+  @post.destroy
+
+  redirect_to posts_path
+end
+~~~~
+
 posts/_form.html.erb
 ~~~~erb
 <div class="section">
@@ -271,4 +299,9 @@ posts/edit.html.erb
 <% content_for :page_title, "Edit Post" %>
 <%= render 'form' %>
 ~~~~
+กด refresh ทดสอบการทำงาน 
 
+
+
+### Plan
+ -> _add comments and alert message( coming soon )_
