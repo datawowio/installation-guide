@@ -15,6 +15,9 @@ rails new blog -d=postgresql && cd blog
 rails db:create # create database
 rails server # run server
 ~~~~
+ทดสอบ http://localhost:3000/
+<img width="1440" alt="Screen Shot 2562-05-23 at 15 58 05" src="https://user-images.githubusercontent.com/40669001/58390849-75e88f80-805d-11e9-9e6b-4f001aabad07.png">
+
 โอเคครับ ระบบยังทำงานได้ 
 ต่อไปเรามาเตรียมเครื่องมือให้เราใช้งานได้สะดวกขึ้นอีกนะครับ
 
@@ -59,6 +62,9 @@ change application.css -> application.scss
 @import 'bulma'
 ~~~~
 ทดสอบการทำงาน http://localhost:3000/posts
+
+<img width="322" alt="Screen Shot 2562-05-27 at 09 01 05" src="https://user-images.githubusercontent.com/40669001/58390978-0030f380-805e-11e9-8700-2937e57b3b96.png">
+
 
 เมื่อเรามี controller ไว้ติดต่อหน้าบ้านแล้ว เราก็ต้องมี model ไว้ติดต่อ database
 ~~~~ruby
@@ -108,8 +114,12 @@ views/new.html.erb
 ~~~~
 ทดสอบ http://localhost:3000/posts/new
 
+<img width="1128" alt="Screen Shot 2562-05-27 at 09 03 15" src="https://user-images.githubusercontent.com/40669001/58391051-4b4b0680-805e-11e9-8e4c-9cf4507530fd.png">
 
 เมื่อเรากดสร้าง post จะเห็นได้ว่า โค้ด error
+
+<img width="1124" alt="Screen Shot 2562-05-27 at 09 05 21" src="https://user-images.githubusercontent.com/40669001/58391123-9bc26400-805e-11e9-8b62-fa8dc0e957bb.png">
+
 เอ... เป็นเพราะว่า post_path มันจะวิ่งไปที่ show และ เรายังไม่ได้ สร้างหน้า show.html.erb นั้นเอง
 
 ก่อนที่เราจะสร้างหน้า show เราควรเพิ่ม method กันก่อน
@@ -153,6 +163,9 @@ posts/show.html.erb
 </section>
 ~~~~
 กด refresh ทดสอบการทำงาน
+
+<img width="1129" alt="Screen Shot 2562-05-27 at 09 07 24" src="https://user-images.githubusercontent.com/40669001/58391179-dc21e200-805e-11e9-9d37-23ab0ca22000.png">
+
 เมื่อ หน้า show ทำงานได้ ตามปกติแล้ว
 ต่อไป มาสร้าง หน้า post list กันต่อ
 
