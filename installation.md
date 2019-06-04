@@ -1,4 +1,4 @@
-## **Installation guide**
+## **Installation**
 
 **XCode Command Line Developer Tools**
 ```
