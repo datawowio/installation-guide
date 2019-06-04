@@ -1,9 +1,4 @@
 ## **Installation guide**
-ไอซ์
-ฮ้วง
-เอิก
-ไกด์
-นนท์
 
 **XCode Command Line Developer Tools**
 ```
